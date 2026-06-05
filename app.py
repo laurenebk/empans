@@ -36,11 +36,11 @@ with tab1:
         with col5:
             r2 = st.segmented_control(".", ["Vrai", "Faux"], key=f"endroit_e2_{empan}", label_visibility="collapsed")
 
-     if r1 == "✅":
+     if r1 == "Vrai":
          score_mcd += 1
-       if r2 == "✅":
+       if r2 == "Vrai":
          score_mcd += 1
-      if r1 == "✅" or r2 == "✅":
+      if r1 == "Vrai" or r2 == "Vrai":
            score_emcd = empan
 
     st.metric("Score MCD", score_mcd)
