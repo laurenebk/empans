@@ -1,5 +1,10 @@
 import streamlit as st
 
+score_mcd = 0
+score_emcd = 0
+score_mci = 0
+score_emci = 0
+
 st.title("Empans")
 st.write("Lire chaque suite de chiffre au rythme de un par seconde.")
 
@@ -25,11 +30,22 @@ with tab1:
         with col2:
             st.write(f"{essai1}")
         with col3:
-            st.segmented_control(".", ["Vrai", "Faux"], key=f"endroit_e1_{empan}", label_visibility="collapsed")
+            r1 = st.segmented_control(".", ["Vrai", "Faux"], key=f"endroit_e1_{empan}", label_visibility="collapsed")
         with col4:
             st.write(f"{essai2}")
         with col5:
-            st.segmented_control(".", ["Vrai", "Faux"], key=f"endroit_e2_{empan}", label_visibility="collapsed")
+            r2 = st.segmented_control(".", ["Vrai", "Faux"], key=f"endroit_e2_{empan}", label_visibility="collapsed")
+
+     if r1 == "✅":
+         score_mcd += 1
+       if r2 == "✅":
+         score_mcd += 1
+      if r1 == "✅" or r2 == "✅":
+           score_emcd = empan
+
+    st.metric("Score MCD", score_mcd)
+    st.metric("Empan MCD", score_emcd)
+
 
 with tab2:
     st.write("Empan de chiffres inverse")
