@@ -20,7 +20,7 @@ with tab1:
     }
 
     for empan, (essai1, essai2) in sequences_endroit.items():
-        col1, col2, col3 = st.columns([1, 2, 2])
+        col1, col2, col3 = st.columns([2,1,1])
         with col1:
             st.write(f"**{essai1}**")
         with col2:
