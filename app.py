@@ -8,7 +8,14 @@ tab1, tab2, tab3, tab4= st.tabs(["➡️ Empan endroit", "⬅️ Empan inverse",
 with tab1:
     st.write("Empan de chiffres endroit")
 
-    resultat = st.segmented_control("*9 - 7*", ["Vrai", "Faux"])
+    for empan in range(2, 10):
+    col1, col2, col3 = st.columns([1, 2, 2])
+    with col1:
+        st.write(f"**{empan} chiffres**")
+    with col2:
+        st.segmented_control(".", ["✅", "❌"], key=f"endroit_e1_{empan}", label_visibility="collapsed")
+    with col3:
+        st.segmented_control(".", ["✅", "❌"], key=f"endroit_e2_{empan}", label_visibility="collapsed")
 
 with tab2:
     st.write("Empan de chiffres inverse")
