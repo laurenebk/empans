@@ -6,7 +6,6 @@ st.write("Lire chaque suite de chiffre au rythme de un par seconde.")
 tab1, tab2, tab3, tab4= st.tabs(["➡️ Empan endroit", "⬅️ Empan inverse", "📊 Scores", "📄 Rapport"])
 
 with tab1:
-    st.write("Empan de chiffres endroit")
 
     sequences_endroit = {
         2: ("9 - 7", "6 - 3"),
