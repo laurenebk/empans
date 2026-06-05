@@ -1,4 +1,4 @@
 import streamlit as st
 
-st.title("Mon application")
-st.write("Hello, world!")
+st.title("Empans")
+st.write("Lire chaque suite de chiffre au rythme de un par seconde.")
