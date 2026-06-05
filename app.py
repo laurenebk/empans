@@ -8,13 +8,7 @@ tab1, tab2, tab3, tab4= st.tabs(["➡️ Empan endroit", "⬅️ Empan inverse",
 with tab1:
     st.write("Empan de chiffres endroit")
 
-    resultat = st.radio("Essai 1", ["✅ Réussi", "❌ Échoué"], horizontal=True)
-
-    resultat = st.toggle("Essai 1 réussi")  # True ou False, comme checkbox
-
-    resultat = st.pills("Essai 1", ["✅", "❌"])
-
-    resultat = st.segmented_control("Essai 1", ["Réussi", "Échoué"])
+    resultat = st.segmented_control("*9 - 7*", ["Vrai", "Faux"])
 
 with tab2:
     st.write("Empan de chiffres inverse")
