@@ -24,7 +24,7 @@ with tab1:
     }
 
     for empan, (essai1, essai2) in sequences_endroit.items():
-        col1, col2, col3, col4, col5 = st.columns([1, 3, 2, 3, 2])
+        col1, col2, col3, col4, col5 = st.columns([1, 2, 1, 2, 1])
         with col1:
             st.write(f"**{empan}**")
         with col2:
@@ -36,12 +36,12 @@ with tab1:
         with col5:
             r2 = st.segmented_control(".", ["Vrai", "Faux"], key=f"endroit_e2_{empan}", label_visibility="collapsed")
 
-     if r1 == "Vrai":
-         score_mcd += 1
-       if r2 == "Vrai":
-         score_mcd += 1
-      if r1 == "Vrai" or r2 == "Vrai":
-           score_emcd = empan
+    if r1 == "Vrai":   # ← même niveau que les "with"
+        score_mcd += 1
+    if r2 == "Vrai":
+        score_mcd += 1
+    if r1 == "Vrai" or r2 == "Vrai":
+        score_emcd = empan
 
     st.metric("Score MCD", score_mcd)
     st.metric("Empan MCD", score_emcd)
