@@ -12,4 +12,4 @@ with tab2:
     st.subheader("📊 Scores")
 
 with tab3:
-    st.subheader("📄 Rapport)
+    st.subheader("📄 Rapport")
