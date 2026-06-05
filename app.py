@@ -20,13 +20,17 @@ with tab1:
     }
 
     for empan, (essai1, essai2) in sequences_endroit.items():
-        col1, col2, col3 = st.columns([2,1,1])
+        col1, col2, col3, col4, col5 = st.columns([1, 2, 1, 2, 1])
         with col1:
-            st.write(f"**{essai1}**")
+            st.write(f"**{empan}**")
         with col2:
-            st.segmented_control(".", ["Vrai", "Faux"], key=f"endroit_e1_{empan}", label_visibility="collapsed")
+            st.write(f"{essai1}")
         with col3:
-            st.segmented_control(".", ["Vrai", "Faux"], key=f"endroit_e2_{empan}", label_visibility="collapsed")
+            st.segmented_control(".", ["✅", "❌"], key=f"endroit_e1_{empan}", label_visibility="collapsed")
+        with col4:
+            st.write(f"{essai2}")
+        with col5:
+            st.segmented_control(".", ["✅", "❌"], key=f"endroit_e2_{empan}", label_visibility="collapsed")
 
 with tab2:
     st.write("Empan de chiffres inverse")
